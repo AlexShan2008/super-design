@@ -35,3 +35,10 @@ npm run storybook
 ```sh
 npm install  styled-components @types/styled-components -D
 ```
+## polished
+
+> 为了在styled-components里像scss等预处理器一样写常用函数，还需要安装下polished这个库。
+
+```sh
+npm install --save polished
+```
