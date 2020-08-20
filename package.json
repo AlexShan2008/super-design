@@ -1,10 +1,14 @@
 {
   "name": "super-design",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "license": "MIT",
   "description": "An React UI library with React components use TypeScript and storybook",
-  "keywords": ["React UI library", "React Component", "TypeScript"],
+  "keywords": [
+    "React UI library",
+    "React Component",
+    "TypeScript"
+  ],
   "author": "shantong.sir@gmail.com",
   "repository": {
     "type": "git",
@@ -25,10 +29,10 @@
     "typescript": "~3.7.2"
   },
   "peerDependencies": {
-		"react": ">=16.8.0",
-		"react-dom": ">=16.8.0",
-		"styled-components": "^5.1.1"
-	},
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
+    "styled-components": "^5.1.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "tsc -p tsconfig.build.json",
@@ -42,7 +46,7 @@
     "extends": "react-app"
   },
   "files": [
-		"dist"
+    "dist"
   ],
   "browserslist": {
     "production": [
@@ -74,10 +78,10 @@
     "styled-components": "^5.1.1"
   },
   "jest": {
-		"collectCoverageFrom": [
-			"!src/**/*.stories.tsx",
-			"src/**/*.tsx",
-			"!src/**/*.snap"
-		]
-	}
+    "collectCoverageFrom": [
+      "!src/**/*.stories.tsx",
+      "src/**/*.tsx",
+      "!src/**/*.snap"
+    ]
+  }
 }
