@@ -1,7 +1,15 @@
 {
-  "name": "r-ui",
+  "name": "super-design",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license": "MIT",
+  "description": "An React UI library with React components use TypeScript and storybook",
+  "keywords": ["React UI library", "React Component", "TypeScript"],
+  "author": "shantong.sir@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:AlexShan2008/super-design.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -16,9 +24,14 @@
     "react-scripts": "3.4.3",
     "typescript": "~3.7.2"
   },
+  "peerDependencies": {
+		"react": ">=16.8.0",
+		"react-dom": ">=16.8.0",
+		"styled-components": "^5.1.1"
+	},
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "tsc -p tsconfig.build.json",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -28,6 +41,9 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "files": [
+		"dist"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",

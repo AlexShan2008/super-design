@@ -3,13 +3,13 @@
 ## install react project
 
 ```sh
-npx create-react-app r-ui
+npx create-react-app super-design
 ```
 
 ## cd your project
 
 ```sh
-cd r-ui
+cd super-design
 ```
 
 ## install storybook

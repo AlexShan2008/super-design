@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -e
+set -o pipefail
+
+cd "$(dirname "$0")/.."
+
+old_version="v$(node -p "require('./package.json').version")"
+
+git tag --delete $old_version &> /dev/null || true
+npm version --allow-same-version ${1:-patch} &> /dev/null || true
+
+new_version="v$(node -p "require('./package.json').version")"
+
+git tag --force $new_version
+
+until git push --force origin $new_version; do
+  echo retrying...
+done
+
+git push
