@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.js": "./main.d1475058ecd76d754300.bundle.js",
+    "main.js.map": "./main.d1475058ecd76d754300.bundle.js.map",
+    "runtime~main.js": "./runtime~main.d1475058ecd76d754300.bundle.js",
+    "runtime~main.js.map": "./runtime~main.d1475058ecd76d754300.bundle.js.map",
+    "vendors~main.js": "./vendors~main.d1475058ecd76d754300.bundle.js",
+    "vendors~main.js.map": "./vendors~main.d1475058ecd76d754300.bundle.js.map",
+    "iframe.html": "./iframe.html",
+    "precache-manifest.a4eef327ec8d6e37cf8eaa205546b1a2.js": "./precache-manifest.a4eef327ec8d6e37cf8eaa205546b1a2.js",
+    "service-worker.js": "./service-worker.js",
+    "static/media/code-brackets.svg": "./static/media/code-brackets.c9df018b.svg",
+    "static/media/colors.svg": "./static/media/colors.771456e0.svg",
+    "static/media/comments.svg": "./static/media/comments.84015590.svg",
+    "static/media/direction.svg": "./static/media/direction.ea9e1b4e.svg",
+    "static/media/flow.svg": "./static/media/flow.0a3e69de.svg",
+    "static/media/plugin.svg": "./static/media/plugin.4e48689a.svg",
+    "static/media/repo.svg": "./static/media/repo.0d87ede8.svg",
+    "static/media/stackalt.svg": "./static/media/stackalt.f725b73e.svg",
+    "vendors~main.d1475058ecd76d754300.bundle.js.LICENSE.txt": "./vendors~main.d1475058ecd76d754300.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.d1475058ecd76d754300.bundle.js",
+    "vendors~main.d1475058ecd76d754300.bundle.js",
+    "main.d1475058ecd76d754300.bundle.js"
+  ]
+}
