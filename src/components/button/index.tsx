@@ -1,90 +1,101 @@
-import React, { ButtonHTMLAttributes, PropsWithChildren, ReactNode, AnchorHTMLAttributes, useMemo} from "react";
-import styled from "styled-components";
-import { color, typography } from "../shared/styles";
-import { darken, rgba, opacify } from "polished";
-import {easing}from '../shared/animation'
-
-export type AppearancesTypes = keyof typeof APPEARANCES;
-
-type btnType =
-	| "primary"
-	| "primaryOutline"
-	| "secondary"
-	| "secondaryOutline"
-	| "tertiary"
-	| "outline"
-	| "inversePrimary"
-	| "inverseSecondary"
-	| "inverseOutline";
-
-type AppearancesObj = {
-	[key in btnType]: btnType;
-};
-
-export const APPEARANCES: AppearancesObj = {
-	primary: "primary",
-	primaryOutline: "primaryOutline",
-	secondary: "secondary",
-	secondaryOutline: "secondaryOutline",
-	tertiary: "tertiary",
-	outline: "outline",
-	inversePrimary: "inversePrimary",
-	inverseSecondary: "inverseSecondary",
-	inverseOutline: "inverseOutline",
-};
-
-export type SizesTypes = keyof typeof SIZES;
-type sizeType = "small" | "medium";
-type sizeObj = {
-	[key in sizeType]: sizeType;
-};
-export const SIZES: sizeObj = {
-	small: "small",
-	medium: "medium",
-};
-
-const Text = styled.span`
+import React, {
+	ButtonHTMLAttributes,
+	PropsWithChildren,
+	AnchorHTMLAttributes,
+	ReactNode,
+	useMemo,
+  } from 'react'
+  import styled from 'styled-components'
+  import { color, typography } from '../shared/styles'
+  import { darken, rgba, opacify } from 'polished'
+  import { easing } from '../shared/animation'
+  
+  // const Mybutton = styled.button({
+  //   color: "red",
+  // });
+  
+  export type AppearancesTypes = keyof typeof APPEARANCES
+  
+  type btnType =
+	| 'primary'
+	| 'primaryOutline'
+	| 'secondary'
+	| 'secondaryOutline'
+	| 'tertiary'
+	| 'outline'
+	| 'inversePrimary'
+	| 'inverseSecondary'
+	| 'inverseOutline'
+  type AppearancesObj = {
+	[key in btnType]: btnType
+  }
+  
+  export const APPEARANCES: AppearancesObj = {
+	primary: 'primary',
+	primaryOutline: 'primaryOutline',
+	secondary: 'secondary',
+	secondaryOutline: 'secondaryOutline',
+	tertiary: 'tertiary',
+	outline: 'outline',
+	inversePrimary: 'inversePrimary',
+	inverseSecondary: 'inverseSecondary',
+	inverseOutline: 'inverseOutline',
+  }
+  
+  export type SizesTypes = keyof typeof SIZES
+  type sizeType = 'small' | 'medium'
+  type sizeObj = {
+	[key in sizeType]: sizeType
+  }
+  
+  export const SIZES: sizeObj = {
+	small: 'small',
+	medium: 'medium',
+  }
+  
+  export const btnpadding: { small: string; medium: string } = {
+	small: '8px 16px',
+	medium: '13px 20px',
+  }
+  
+  const Text = styled.span`
 	display: inline-block;
 	vertical-align: top;
-`;
-
-const Loading = styled.span`
+  `
+  
+  const Loading = styled.span`
 	position: absolute;
 	top: 50%;
 	left: 0;
 	right: 0;
 	opacity: 0;
-`;
-
-export interface CustormButtonProps {
+  `
+  
+  export interface CustormButtonProps {
 	/** 是否禁用 */
-	disabled?: boolean;
+	disabled?: boolean
 	/** 是否加载中 */
-	isLoading?: boolean;
+	isLoading?: boolean
 	/** 是否是a标签 */
-	isLink?: boolean;
+	isLink?: boolean
 	/** 是否替换加载中文本 */
-	loadingText?: ReactNode;
+	loadingText?: ReactNode
 	/** 按钮大小 */
-	size?: SizesTypes;
+	size?: SizesTypes
 	/** 按钮类型 */
-	appearance?: AppearancesTypes;
+	appearance?: AppearancesTypes
 	/** 无效点击 */
-	isUnclickable?: boolean;
-}
-
-export type ButtonProps = CustormButtonProps &
-	AnchorHTMLAttributes<HTMLAnchorElement> &
-	ButtonHTMLAttributes<HTMLButtonElement>;
-
-	const StyledButton = styled.button<ButtonProps>`
+	isUnclickable?: boolean
+  }
+  
+  const StyledButton = styled.button<ButtonProps>`
 	border: 0;
 	border-radius: 3em;
 	cursor: pointer;
 	display: inline-block;
 	overflow: hidden;
 	padding: ${(props) =>
-		  props.size === SIZES.small ? "8px 16px" : "13px 20px"};
+	  props.size === SIZES.small ? '8px 16px' : '13px 20px'};
 	position: relative;
 	text-align: center;
 	text-decoration: none;
@@ -99,13 +110,13 @@ export type ButtonProps = CustormButtonProps &
   
   
 	font-size: ${(props) =>
-		  props.size === SIZES.small ? typography.size.s1 : typography.size.s2}px;
+	  props.size === SIZES.small ? typography.size.s1 : typography.size.s2}px;
 	font-weight: ${typography.weight.extrabold};
 	line-height: 1;
   
 	${(props) =>
-		  !props.isLoading &&
-		  `
+	  !props.isLoading &&
+	  `
 		&:hover {
 		  transform: translate3d(0, -2px, 0);
 		  box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
@@ -135,8 +146,8 @@ export type ButtonProps = CustormButtonProps &
 	}
   
 	${(props) =>
-		  props.disabled &&
-		  `
+	  props.disabled &&
+	  `
 		cursor: not-allowed !important;
 		opacity: 0.5;
 		&:hover {
@@ -145,8 +156,8 @@ export type ButtonProps = CustormButtonProps &
 	  `}
   
 	${(props) =>
-		  props.isUnclickable &&
-		  `
+	  props.isUnclickable &&
+	  `
 		cursor: default !important;
 		pointer-events: none;
 		&:hover {
@@ -155,8 +166,8 @@ export type ButtonProps = CustormButtonProps &
 	  `}
   
 	${(props) =>
-		  props.isLoading &&
-		  `
+	  props.isLoading &&
+	  `
 		cursor: progress !important;
 		opacity: 0.7;
   
@@ -176,16 +187,15 @@ export type ButtonProps = CustormButtonProps &
 		}
 	  `}
   
-  
-  
 	${(props) =>
-		  props.appearance === APPEARANCES.primary &&
-		  `
+	  props.appearance === APPEARANCES.primary &&
+	  `
 		background: ${color.primary};
 		color: ${color.lightest};
   
-		${!props.isLoading &&
-			  `
+		${
+		  !props.isLoading &&
+		  `
 			&:hover {
 			  background: ${darken(0.05, color.primary)};
 			}
@@ -198,17 +208,19 @@ export type ButtonProps = CustormButtonProps &
 			&:focus:hover {
 			  box-shadow: ${rgba(color.primary, 0.2)} 0 8px 18px 0px;
 			}
-		  `}
+		  `
+		}
 	  `}
   
 	${(props) =>
-		  props.appearance === APPEARANCES.secondary &&
-		  `
+	  props.appearance === APPEARANCES.secondary &&
+	  `
 		background: ${color.secondary};
 		color: ${color.lightest};
   
-		${!props.isLoading &&
-			  `
+		${
+		  !props.isLoading &&
+		  `
 			&:hover {
 			  background: ${darken(0.05, color.secondary)};
 			}
@@ -221,17 +233,19 @@ export type ButtonProps = CustormButtonProps &
 			&:focus:hover {
 			  box-shadow: ${rgba(color.secondary, 0.2)} 0 8px 18px 0px;
 			}
-		  `}
+		  `
+		}
 	  `}
   
 	${(props) =>
-		  props.appearance === APPEARANCES.tertiary &&
-		  `
+	  props.appearance === APPEARANCES.tertiary &&
+	  `
 		background: ${color.tertiary};
 		color: ${color.darkest};
   
-		${!props.isLoading &&
-			  `
+		${
+		  !props.isLoading &&
+		  `
 			&:hover {
 			  background: ${darken(0.05, color.tertiary)};
 			}
@@ -244,18 +258,20 @@ export type ButtonProps = CustormButtonProps &
 			&:focus:hover {
 			  box-shadow: ${rgba(color.darkest, 0.05)} 0 8px 18px 0px;
 			}
-		  `}
+		  `
+		}
 	  `}
   
 	${(props) =>
-		  props.appearance === APPEARANCES.outline &&
-		  `
+	  props.appearance === APPEARANCES.outline &&
+	  `
 		box-shadow: ${opacify(0.05, color.border)} 0 0 0 1px inset;
 		color: ${color.dark};
 		background: transparent;
   
-		${!props.isLoading &&
-			  `
+		${
+		  !props.isLoading &&
+		  `
 			&:hover {
 			  box-shadow: ${opacify(0.3, color.border)} 0 0 0 1px inset;
 			}
@@ -268,7 +284,7 @@ export type ButtonProps = CustormButtonProps &
   
 			&:active:focus:hover {
 			  ${
-				  /* This prevents the semi-transparent border from appearing atop the background */ ""
+				/* This prevents the semi-transparent border from appearing atop the background */ ''
 			  }
 			  background: ${opacify(0.05, color.border)};
 			  box-shadow:  ${rgba(color.darkest, 0.15)} 0 1px 9px 2px;
@@ -282,12 +298,13 @@ export type ButtonProps = CustormButtonProps &
 			  box-shadow: ${opacify(0.05, color.border)} 0 0 0 1px inset, 
 			  ${rgba(color.darkest, 0.05)} 0 8px 18px 0px;
 			}
-		  `};
+		  `
+		};
 	  `};
   
 	  ${(props) =>
-		  props.appearance === APPEARANCES.primaryOutline &&
-		  `
+		props.appearance === APPEARANCES.primaryOutline &&
+		`
 		  box-shadow: ${color.primary} 0 0 0 1px inset;
 		  color: ${color.primary};
   
@@ -303,21 +320,21 @@ export type ButtonProps = CustormButtonProps &
 		  }
 		  &:focus {
 			box-shadow: ${color.primary} 0 0 0 1px inset, ${rgba(
-			  color.primary,
-			  0.4
-		  )} 0 1px 9px 2px;
+		  color.primary,
+		  0.4
+		)} 0 1px 9px 2px;
 		  }
 		  &:focus:hover {
 			box-shadow: ${color.primary} 0 0 0 1px inset, ${rgba(
-			  color.primary,
-			  0.2
-		  )} 0 8px 18px 0px;
+		  color.primary,
+		  0.2
+		)} 0 8px 18px 0px;
 		  }
 		`};
   
 	  ${(props) =>
-		  props.appearance === APPEARANCES.secondaryOutline &&
-		  `
+		props.appearance === APPEARANCES.secondaryOutline &&
+		`
 		  box-shadow: ${color.secondary} 0 0 0 1px inset;
 		  color: ${color.secondary};
   
@@ -342,13 +359,14 @@ export type ButtonProps = CustormButtonProps &
 		`};
   
 		${(props) =>
-			  props.appearance === APPEARANCES.inversePrimary &&
-			  `
+		  props.appearance === APPEARANCES.inversePrimary &&
+		  `
 			background: ${color.lightest};
 			color: ${color.primary};
   
-			${!props.isLoading &&
-				  `
+			${
+			  !props.isLoading &&
+			  `
 				&:hover {
 				  background: ${color.lightest};
 				}
@@ -361,17 +379,19 @@ export type ButtonProps = CustormButtonProps &
 				&:focus:hover {
 				  box-shadow: ${rgba(color.primary, 0.2)} 0 8px 18px 0px;
 				}
-			`}
+			`
+			}
 		`}
   
 		${(props) =>
-			  props.appearance === APPEARANCES.inverseSecondary &&
-			  `
+		  props.appearance === APPEARANCES.inverseSecondary &&
+		  `
 			background: ${color.lightest};
 			color: ${color.secondary};
   
-			${!props.isLoading &&
-				  `
+			${
+			  !props.isLoading &&
+			  `
 				&:hover {
 				  background: ${color.lightest};
 				}
@@ -384,12 +404,13 @@ export type ButtonProps = CustormButtonProps &
 				&:focus:hover {
 				  box-shadow: ${rgba(color.secondary, 0.2)} 0 8px 18px 0px;
 				}
-			`}
+			`
+			}
 		`}
   
 		${(props) =>
-			  props.appearance === APPEARANCES.inverseOutline &&
-			  `
+		  props.appearance === APPEARANCES.inverseOutline &&
+		  `
 			box-shadow: ${color.lightest} 0 0 0 1px inset;
 			color: ${color.lightest};
   
@@ -412,31 +433,41 @@ export type ButtonProps = CustormButtonProps &
 				${rgba(color.darkest, 0.2)} 0 8px 18px 0px;
 			}
 		`};
+  `
   
-  `;
-
+  export type ButtonProps = CustormButtonProps &
+	AnchorHTMLAttributes<HTMLAnchorElement> &
+	ButtonHTMLAttributes<HTMLButtonElement>
+  
+  // interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
+  
+  // function Button(props: PropsWithChildren<ButtonProps>) {
+  //   const { children, ...rest } = props;
+  //   return <Mybutton {...rest}>{children}</Mybutton>;
+  // }
+  
   function Button(props: PropsWithChildren<ButtonProps>) {
-	const { isLoading, loadingText, isLink, children } = props;
+	const { isLoading, loadingText, isLink, children } = props
 	const buttonInner = (
-		<>
-			<Text>{children}</Text>
-			{isLoading && <Loading>{loadingText || "Loading..."}</Loading>}
-		</>
-	);
+	  <>
+		<Text>{children}</Text>
+		{isLoading && <Loading>{loadingText || 'Loading...'}</Loading>}
+	  </>
+	)
 	const btnType = useMemo(() => {
-		if (isLink) {
-			return "a";
-		}
-	}, [isLink]);
-
+	  if (isLink) {
+		return 'a'
+	  }
+	}, [isLink])
+  
 	return (
-		<StyledButton as={btnType} {...props}>
-			{buttonInner}
-		</StyledButton>
-	);
-}
-
-Button.defaultProps = {
+	  <StyledButton as={btnType} {...props}>
+		{buttonInner}
+	  </StyledButton>
+	)
+  }
+  
+  Button.defaultProps = {
 	isLoading: false,
 	loadingText: null,
 	isLink: false,
@@ -446,6 +477,7 @@ Button.defaultProps = {
 	containsIcon: false,
 	size: SIZES.medium,
 	ButtonWrapper: undefined,
-};
-
-export default Button;
+  }
+  
+  export default Button
+  

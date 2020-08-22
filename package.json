@@ -1,6 +1,6 @@
 {
-  "name": "@alexshan2008/super-design",
-  "version": "0.1.4",
+  "name": "super-design",
+  "version": "0.1.5",
   "private": false,
   "license": "MIT",
   "description": "An React UI library with React components use TypeScript and storybook",
@@ -13,9 +13,6 @@
   "repository": {
     "type": "https",
     "url": "https://github.com/AlexShan2008/super-design"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/AlexShan2008"
   },
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
