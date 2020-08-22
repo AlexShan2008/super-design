@@ -14,9 +14,22 @@
     "type": "https",
     "url": "https://github.com/AlexShan2008/super-design"
   },
+  "files": [
+    "dist"
+  ],
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "sideEffects": false,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "coverage": "react-scripts test --coverage --watchAll=false",
+    "coverall": "npm run coverage  && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -35,33 +48,6 @@
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
     "styled-components": "^5.1.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "tsc -p tsconfig.build.json",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
-    "coverage": "react-scripts test --coverage --watchAll=false"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "files": [
-    "dist"
-  ],
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
@@ -86,5 +72,20 @@
       "src/**/*.tsx",
       "!src/**/*.snap"
     ]
-  }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
 }

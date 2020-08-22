@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/AlexShan2008/super-design/badge.svg)](https://coveralls.io/github/AlexShan2008/super-design)
+
 # Super Design
 
 An React UI library with React components use TypeScript and storybook
