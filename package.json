@@ -1,6 +1,6 @@
 {
   "name": "@alexshan2008/super-design",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "license": "MIT",
   "description": "An React UI library with React components use TypeScript and storybook",
