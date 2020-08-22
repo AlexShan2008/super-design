@@ -15,3 +15,8 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+export * from "./components/button";
+export * from "./components/shared/global";
+export * from "./components/shared/styles";
+export * from "./components/shared/animation";
