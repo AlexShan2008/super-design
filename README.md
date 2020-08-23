@@ -1,4 +1,4 @@
-# [Super Design](https://alexshan.com/) &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg) [![Coverage Status](https://coveralls.io/repos/github/AlexShan2008/super-design/badge.svg)](https://coveralls.io/github/AlexShan2008/super-design)
+# [Super Design](http://alexshan.com/) &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg) [![Coverage Status](https://coveralls.io/repos/github/AlexShan2008/super-design/badge.svg)](https://coveralls.io/github/AlexShan2008/super-design)
 
 # Super Design
 

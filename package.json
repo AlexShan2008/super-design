@@ -28,7 +28,8 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "coverage": "react-scripts test --coverage --watchAll=false",
-    "coverall": "npm run coverage  && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "coverall": "npm run coverage  && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "plop": "plop"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -43,7 +44,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
-    "typescript": "~3.7.2"
+    "typescript": "^3.8.3"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
@@ -64,6 +65,7 @@
     "@storybook/react": "^6.0.10",
     "@types/styled-components": "^5.1.2",
     "babel-loader": "^8.1.0",
+    "plop": "^2.7.4",
     "react-is": "^16.13.1",
     "styled-components": "^5.1.1"
   },
