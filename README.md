@@ -11,6 +11,12 @@ cd your-project
 npm i super-design styled-components
 ```
 
+## start
+
+```sh
+npm run storybook
+```
+
 ## import the `super-design` package
 
 ```sh
