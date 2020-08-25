@@ -19,7 +19,9 @@
   ],
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "sideEffects": false,
+  "sideEffects": [
+    "dist/*"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "tsc -p tsconfig.build.json",
@@ -29,6 +31,7 @@
     "build-storybook": "build-storybook -s public",
     "coverage": "react-scripts test --coverage",
     "coverall": "npm run coverage  && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "prepublish": "npm run build",
     "plop": "plop"
   },
   "dependencies": {
