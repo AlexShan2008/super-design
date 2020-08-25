@@ -1,6 +1,6 @@
 {
   "name": "super-design",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "private": false,
   "license": "MIT",
   "description": "An React UI library with React components use TypeScript and storybook",
