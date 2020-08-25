@@ -43,4 +43,4 @@ Icon.defaultProps = {
   color: 'black',
 }
 
-export default Icon
+export default Icon;

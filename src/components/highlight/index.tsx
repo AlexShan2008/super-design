@@ -141,4 +141,4 @@ export function Highlight(props: PropsWithChildren<HighlightProps>) {
   );
 }
 
-export default Highlight
+export default Highlight;

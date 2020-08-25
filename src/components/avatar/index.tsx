@@ -1,8 +1,8 @@
-import React, { HTMLAttributes, useMemo } from 'react'
-import styled, { css } from 'styled-components'
-import { color, typography } from '../shared/styles'
-import { glow } from '../shared/animation'
-import { Icon } from '../icon'
+import React, { useMemo, HTMLAttributes } from "react";
+import styled, { css } from "styled-components";
+import { color, typography } from "../shared/styles";
+import { glow } from "../shared/animation";
+import { Icon } from "../icon";
 
 export const AvatarSize = {
 	large: 40,
@@ -111,7 +111,7 @@ interface a11yProps {
 	[key: string]: boolean | string;
 }
 
-function Avatar(props: AvatarProps) {
+export function Avatar(props: AvatarProps) {
 	const { isLoading, src, username, size } = props;
 	const avatarFigure = useMemo(() => {
 		let avatarFigure = <Icon icon="useralt" />;
@@ -154,4 +154,4 @@ Avatar.defaultProps = {
 	size: "medium",
 };
 
-export  default Avatar
+export default Avatar;

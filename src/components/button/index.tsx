@@ -482,5 +482,5 @@ import React, {
 	ButtonWrapper: undefined,
   }
   
-  export default Button
+  export default Button;
   
