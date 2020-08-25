@@ -42,3 +42,5 @@ Icon.defaultProps = {
   block: false,
   color: 'black',
 }
+
+export default Icon

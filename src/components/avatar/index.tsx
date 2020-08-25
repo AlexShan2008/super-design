@@ -111,7 +111,7 @@ interface a11yProps {
 	[key: string]: boolean | string;
 }
 
-export function Avatar(props: AvatarProps) {
+function Avatar(props: AvatarProps) {
 	const { isLoading, src, username, size } = props;
 	const avatarFigure = useMemo(() => {
 		let avatarFigure = <Icon icon="useralt" />;
@@ -153,3 +153,5 @@ Avatar.defaultProps = {
 	src: null,
 	size: "medium",
 };
+
+export  default Avatar
