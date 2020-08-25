@@ -1,6 +1,6 @@
 {
   "name": "super-design",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "private": false,
   "license": "MIT",
   "description": "An React UI library with React components use TypeScript and storybook",
@@ -18,7 +18,7 @@
     "dist"
   ],
   "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+	"types": "dist/index.d.ts",
   "sideEffects": false,
   "scripts": {
     "start": "react-scripts start",

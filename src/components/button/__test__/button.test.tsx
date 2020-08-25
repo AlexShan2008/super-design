@@ -1,5 +1,6 @@
 import React from "react";
-import { render, fireEvent, cleanup } from "@testing-library/react";
+import { render, cleanup } from "@testing-library/react";
+import { fireEvent } from "@testing-library/dom";
 import Button, { ButtonProps, btnPadding } from "../index";
 import { color, typography } from "../../shared/styles";
 

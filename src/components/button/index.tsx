@@ -53,7 +53,7 @@ import React, {
 	medium: 'medium',
   }
   
-  export const btnpadding: { small: string; medium: string } = {
+  export const btnPadding: { small: string; medium: string } = {
 	small: '8px 16px',
 	medium: '13px 20px',
   }
@@ -459,9 +459,12 @@ import React, {
 		return 'a'
 	  }
 	}, [isLink])
+
+	// 如果执行npm run coverage命令报错,可以启用下面的代码来回避
+	// return React.createElement(StyledButton, { as: btnType, ...props ,"data-testid":"button"},buttonInner);
   
 	return (
-	  <StyledButton as={btnType} {...props}>
+	  <StyledButton as={btnType} {...props} data-testid="button">
 		{buttonInner}
 	  </StyledButton>
 	)
