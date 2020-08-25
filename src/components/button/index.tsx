@@ -446,7 +446,7 @@ import React, {
   //   return <Mybutton {...rest}>{children}</Mybutton>;
   // }
   
-  function Button(props: PropsWithChildren<ButtonProps>) {
+  export function Button(props: PropsWithChildren<ButtonProps>) {
 	const { isLoading, loadingText, isLink, children } = props
 	const buttonInner = (
 	  <>
