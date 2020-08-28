@@ -14,12 +14,20 @@ npm i super-design styled-components --save
 在你所需要的页面，引入所需组件即可：
 
 ```jsx
-import { Button } from 'super-design'
+import { GlobalStyle,  Avatar, Badge, Button, Icon, Radio, Highlight } from 'super-design'
 
 function App() {
   return (
     <div className="App">
+
+      <GlobalStyle />
+      <Avatar size='large' username='Alex' />
+      <Badge>I am a badge</Badge>
+      <Radio label='帅气' />
       <Button>Super Design</Button>
+      <Highlight>Super Design</Highlight>
+      <Icon icon='watch' color='white' />
+
     </div>
   );
 }
