@@ -14,7 +14,32 @@ npm i super-design styled-components --save
 在你所需要的页面，引入所需组件即可：
 
 ```jsx
-import { GlobalStyle,  Avatar, Badge, Button, Icon, Radio, Highlight } from 'super-design'
+import { GlobalStyle,  Avatar, Badge, Button, Icon, Radio, Highlight, Tree, Upload, Modal } from 'super-design'
+
+const source = [
+    {
+        value: "北京分行",
+        children: [
+            {
+                value: "朝阳支行办事处",
+                children: [
+                    { value: "朝阳支行办事处-1" },
+                    { value: "朝阳支行办事处-2" },
+                ],
+            },
+            { value: "海淀支行办事处" },
+            { value: "石景山支行办事处" },
+        ],
+    },
+    {
+        value: "天津分行",
+        children: [
+            { value: "和平支行办事处" },
+            { value: "河东支行办事处" },
+            { value: "南开支行办事处" },
+        ],
+    },
+];
 
 function App() {
   return (
@@ -27,6 +52,9 @@ function App() {
       <Button>Super Design</Button>
       <Highlight>Super Design</Highlight>
       <Icon icon='watch' color='white' />
+      <Tree source={source} />
+      <Upload />
+      <Modal />
 
     </div>
   );

@@ -203,7 +203,6 @@ function UploadList(props: UploadListProps) {
     const { flist, onRemove } = props;
     return (
         <ul style={{ padding: "10px" }}>
-            {flist.length} length
             {flist.map((item) => {
                 return (
                     <ProgressLi key={item.uid}>
@@ -635,6 +634,7 @@ export function Upload(props: UploadProps) {
 };
 
 Upload.defaultProps = {
+    uploadMode: 'default',
     axiosConfig: {},
     uploadFilename: "avatar",
     successCallback: () => {
