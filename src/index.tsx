@@ -20,7 +20,7 @@ export { default as Highlight } from "./components/highlight";
 export { default as Radio } from "./components/radio";
 export { default as Icon } from "./components/icon";
 export { default as Message } from "./components/message";
-// export { default as Modal } from "./components/modal";
+export { default as Modal } from "./components/modal";
 export { default as Progress } from "./components/progress";
 // export { default as Carousel } from "./components/carousel";
 export { default as GlobalStyle } from "./components/shared/global";

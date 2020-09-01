@@ -1,42 +1,9 @@
 import React, { ReactNode, useMemo, useEffect, useState } from 'react'
 import ReactDom, { unmountComponentAtNode } from 'react-dom'
-import styled, { keyframes, css } from 'styled-components'
+import styled, { css } from 'styled-components'
 import { color, typography, messageBoxShadow } from '../shared/styles'
+import { messageCloseAnimate, iconSpin, messageOpenAnimate } from '../shared/animation'
 import { Icon } from '../icon'
-
-export const messageOpenAnimate = keyframes`
-  0% {
-    opacity: 0;
-    margin-top: -30px;
-  }
-  50% {
-    opacity: 0.1;
-    margin-top: -15px;
-  }
-  100% {
-    opacity: 1;
-    margin-top: 0;
-  }
-`
-
-export const messageCloseAnimate = keyframes`
-  0% {
-    opacity: 1;
-    margin-top: 0;
-  }
-  100% {
-    opacity: 0;
-    margin-top: -30px;
-  }
-`
-export const iconSpin = keyframes`
-  0% {
-     transform: rotate(0deg);
-  }
-  100% {
-     transform: rotate(360deg);
-  }
-`
 
 const MessageText = styled.span<{ bg: string; fc: string }>`
   display: inline-block;
@@ -79,13 +46,7 @@ const MessageTextWrapper = styled.div<{
     `}
 `
 
-export type MessageType =
-    | 'info'
-    | 'success'
-    | 'error'
-    | 'warning'
-    | 'loading'
-    | 'default'
+export type MessageType = 'info' | 'success' | 'error' | 'warning' | 'loading' | 'default'
 
 export interface MessageConfig {
     /** 挂载点*/
@@ -119,20 +80,20 @@ export const createMessage = (type: MessageType) => {
             //如果有的话，说明已经调用过这个函数了，这个空div就可以一直复用
             wrap = document.createElement('div')
             wrap.style.cssText = `
-      line-height:1.5;
-      text-align:center;
-      color: #333;
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      position: fixed;
-      z-index: 100000;
-      width: 100%;
-      top: 16px;
-      left: 0;
-      pointer-events: none;
-      `
+                line-height:1.5;
+                text-align:center;
+                color: #333;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                position: fixed;
+                z-index: 100000;
+                width: 100%;
+                top: 16px;
+                left: 0;
+                pointer-events: none;
+            `
 
             if (wrap) {
                 document.body && document.body.appendChild(wrap) //挂body上
