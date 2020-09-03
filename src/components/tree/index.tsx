@@ -100,7 +100,7 @@ export function Tree(props: TreeProps) {
             children: source,
             value: "root",
         };
-    }, [source]);
+    }, []);
 
     const [dragUpdate, setDragUpdate] = useState(0);
 
