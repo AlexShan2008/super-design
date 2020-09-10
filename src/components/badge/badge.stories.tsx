@@ -1,12 +1,7 @@
 import React from "react";
-import { Badge, badgeColor, BadgeProps } from "./index";
-import { Icon } from '../../index'
-
-import {
-	withKnobs,
-	text,
-	select,
-} from "@storybook/addon-knobs";
+import { Badge, BadgeProps, badgeColor } from "./index";
+import { Icon } from "../icon";
+import { withKnobs, text, select } from "@storybook/addon-knobs";
 
 export default {
 	title: "Badge",

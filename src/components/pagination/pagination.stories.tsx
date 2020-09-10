@@ -1,11 +1,7 @@
-import React from 'react'
-import Pagination from './index'
+import React from "react";
+import { Pagination } from "./index";
+import { withKnobs, number } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
-import { number } from "@storybook/addon-knobs";
-
-import {
-    withKnobs,
-} from "@storybook/addon-knobs";
 
 export default {
     title: "Pagination",
@@ -15,7 +11,7 @@ export default {
 
 export const knobsPagination = () => (
     <Pagination
-        defaultCurrent={number("defualtCurrent", 1)}
+        defaultCurrent={number("defaultCurrent", 2)}
         total={number("total", 100)}
         barMaxSize={number("barMaxSize", 5)}
         pageSize={number("pageSize", 5)}

@@ -5,26 +5,21 @@ html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
-
 body {
   margin: 0;
 }
-
 main {
   display: block;
 }
-
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-
 hr {
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
 }
-
 pre {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
@@ -33,7 +28,6 @@ pre {
 a {
   background-color: transparent;
 }
-
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
@@ -44,6 +38,7 @@ b,
 strong {
   font-weight: bolder;
 }
+
 
 code,
 kbd,
@@ -71,7 +66,6 @@ sub {
 sup {
   top: -0.5em;
 }
-
 img {
   border-style: none;
 }
@@ -123,6 +117,7 @@ fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
 
+
 legend {
   box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
@@ -140,6 +135,7 @@ textarea {
   overflow: auto;
 }
 
+
 [type="checkbox"],
 [type="radio"] {
   box-sizing: border-box; /* 1 */
@@ -156,9 +152,11 @@ textarea {
   outline-offset: -2px; /* 2 */
 }
 
+
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button; /* 1 */
@@ -179,6 +177,7 @@ template {
 
 [hidden] {
   display: none;
-}`;
+}
+`;
 
 export default GlobalStyle;

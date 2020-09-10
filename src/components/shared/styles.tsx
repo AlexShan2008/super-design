@@ -1,5 +1,14 @@
 import { css } from "styled-components";
 
+// Global style variables
+export const background = {
+	app: "#F6F9FC",
+	appInverse: "#7A8997",
+	positive: "#E1FFD4",
+	negative: "#FEDED2",
+	warning: "#FFF5CF",
+};
+
 export const color = {
 	// Palette
 	primary: "#FF4785",
@@ -32,19 +41,11 @@ export const color = {
 	warning: "#E69D00",
 };
 
-export const background = {
-	app: "#F6F9FC",
-	appInverse: "#7A8997",
-	positive: "#E1FFD4",
-	negative: "#FEDED2",
-	warning: "#FFF5CF",
-};
-
 export const typography = {
 	type: {
 		primary:
 			'"Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
-		code://书写字体
+		code:
 			'"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace',
 	},
 	weight: {
@@ -77,12 +78,26 @@ export const spacing = {
 		default: 10,
 	},
 };
-
 export const breakpoint = 600;
-
 export const pageMargin = 5;
 
+export const pageMargins = css`
+	padding: 0 ${spacing.padding.medium}px;
+	@media (min-width: ${breakpoint * 1}px) {
+		margin: 0 ${pageMargin * 1}%;
+	}
+	@media (min-width: ${breakpoint * 2}px) {
+		margin: 0 ${pageMargin * 2}%;
+	}
+	@media (min-width: ${breakpoint * 3}px) {
+		margin: 0 ${pageMargin * 3}%;
+	}
+	@media (min-width: ${breakpoint * 4}px) {
+		margin: 0 ${pageMargin * 4}%;
+	}
+`;
+
 export const messageBoxShadow = css`
-  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
-    0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+		0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
 `;
