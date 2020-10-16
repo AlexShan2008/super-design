@@ -15,18 +15,18 @@
     "url": "https://github.com/AlexShan2008/super-design"
   },
   "files": [
-    "build"
+    "dist"
   ],
-  "module": "build/index.js",
-  "types": "build/index.d.ts",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "sideEffects": false,
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "tsc -p tsconfig.build.json",
+    "build:lib": "tsc -p tsconfig.build.json",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
+    "build": "build-storybook -s public -o ./build",
     "coverage": "react-app-rewired test --coverage",
     "coverall": "npm run coverage  && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "prepare": "npm run build",
