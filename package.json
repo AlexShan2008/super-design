@@ -15,10 +15,10 @@
     "url": "https://github.com/AlexShan2008/super-design"
   },
   "files": [
-    "dist"
+    "build"
   ],
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "module": "build/index.js",
+  "types": "build/index.d.ts",
   "sideEffects": false,
   "scripts": {
     "start": "react-app-rewired start",
