@@ -1,0 +1,22 @@
+{
+    "overrides" : [
+        {
+             "parser": "@typescript-eslint/parser",
+            "files": [
+                "./**/*.ts",
+                "./**/*.tsx"
+            ],
+            "settings": {
+                "import/resolver": {
+                    "typescript": {
+                        "directory": "./"
+                    }
+                }
+            },
+            "rules": {
+                "no-redeclare": "off"
+            }
+        }
+    ]
+
+}
