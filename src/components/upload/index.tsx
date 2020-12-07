@@ -12,7 +12,6 @@ import axios, { AxiosRequestConfig, CancelTokenSource } from "axios";
 import { message } from "../message";
 import Progress from "../progress";
 import { Icon } from "../icon";
-import Modal from "../modal";
 import { iconSpin } from "../shared/animation";
 
 const ImgWrapper = styled.div`
@@ -100,7 +99,6 @@ export const IconSpin = styled.span`
 			animation: ${iconSpin} 2s linear infinite;
 		`}
 	}
-}
 `;
 
 const ProgressListItem = styled.div`
@@ -118,13 +116,13 @@ const ProgressListItemName = styled.div<{ status: ProgressBarStatus }>`
 	color: ${(props) => chooseProgressListColor(props.status)};
 `;
 
-const btnStyle = {
-	padding: "10px",
-};
-const rotateBtnStyle = {
-	padding: "10px",
-	transform: "rotateY(180deg)",
-};
+// const btnStyle = {
+// 	padding: "10px",
+// };
+// const rotateBtnStyle = {
+// 	padding: "10px",
+// 	transform: "rotateY(180deg)",
+// };
 
 function chooseProgressListColor(status: ProgressBarStatus) {
 	switch (status) {
@@ -563,7 +561,7 @@ export function Upload(props: UploadProps) {
 				></ImageList>
 			)}
 
-			<Modal
+			{/* <Modal
 				title="图片裁剪"
 				callback={(v: boolean) => {
 					if (v) {
@@ -674,7 +672,7 @@ export function Upload(props: UploadProps) {
 						<Icon icon="zoomreset" color={color.light}></Icon>
 					</Button>
 				</div>
-			</Modal>
+			</Modal> */}
 		</div>
 	);
 }
